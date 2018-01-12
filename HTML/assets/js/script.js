@@ -25,9 +25,9 @@ $( document ).ready(function() {
                     });
                 $("#reference").click(function(){
                     $("#index").fadeOut();
-                    $("#about_scroll").fadeIn();
-                    $('#about_left').addClass('animated slideInLeft');
-                    $('#about_right').addClass('animated slideInRight');
+                    $("#reference_scroll").fadeIn();
+                    $('#reference_left').addClass('animated slideInLeft');
+                    $('#reference_right').addClass('animated slideInRight');
                     });
 
                 $(".back").click(function(){
