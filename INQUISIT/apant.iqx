@@ -1,0 +1,444 @@
+﻿<values>
+/fontsize_fixation = 3%
+/fontsize_cue = 5%
+/fontsize_target = 5%
+/top_y = 45%
+/bottom_y = 55%
+
+/completetrial_duration = 4000
+/cue_duration  = 100
+/fixation2_duration = 400
+/target_duration = 1700
+/practicefeedback_duration = 2000
+
+/responsekey_left = 18
+/responsekey_right = 23
+/responsekey_leftlabel = "E"
+/responsekey_rightlabel = "I"
+</values>
+<values>
+/completed = 0
+/blockcount = 0
+/trialcount = 0
+/practice = 0
+/cuecondition = 0
+/targetposition = 0
+/targetdirection = 0
+
+/selecttarget = 0
+/selectfeedback = 0
+
+/cue1_x = 0
+/cue1_y = 0
+/cue2_x = 0
+/cue2_y = 0
+/target_x = 0
+/target_y = 0
+
+/fixation1_duration = 500
+/ITI_duration = 0
+/correct = 0
+/rt = 0
+/count_correctNoCue = 0
+/sumRT_correctNoCue = 0
+/count_correctDoubleCue = 0
+/sumRT_correctDoubleCue = 0
+</values>
+<item stimuli>
+/1 = "+"
+/2 = "●"
+/3 = "→"
+/4 = "←"
+/5 = " "
+</item>
+
+
+<item practicefeedback>
+/1 = "错误"
+/2 = "正确"
+</item>
+<text fixation>
+/items = stimuli
+/select = 1
+/position = (50%, 50%)
+/ fontstyle = ("Arial", values.fontsize_fixation, false, false, false, false, 5, 1)
+/ txcolor = (0, 0, 0)
+/erase = false
+</text>
+
+
+<shape eraser>
+/shape = rectangle
+/size = (100%, 100%)
+/position = (50%, 50%)
+/color = (white)
+/ erase = false
+</shape>
+
+<text cue1>
+/items = stimuli
+/select = 2
+/hposition = values.cue1_x
+/vposition = values.cue1_y
+/ fontstyle = ("Arial", values.fontsize_cue, false, false, false, false, 5, 1)
+/ txcolor = (0, 0, 0)
+</text>
+
+<text cue2>
+/items = stimuli
+/select = 2
+/hposition = values.cue2_x
+/vposition = values.cue2_y
+/ fontstyle = ("Arial", values.fontsize_cue, false, false, false, false, 5, 1)
+/ txcolor = (0, 0, 0)
+</text>
+
+<text target>
+/items = stimuli
+/select = values.selecttarget
+/hposition = values.target_x
+/vposition = values.target_y
+/ fontstyle = ("Arial", values.fontsize_target, false, false, false, false, 5, 1)
+/ txcolor = (0, 0, 0)
+</text>
+
+
+<text feedback>
+/items = practicefeedback
+/select = values.selectfeedback
+/ fontstyle = ("Arial", 5%, false, false, false, false, 5, 1)
+/position = (50%, 30%)
+</text>
+
+<text RTfeedback>
+/items = ("your speed: <%(trial.nocue2.sumlatency + trial.doublecue2.sumlatency )/(trial.nocue2.count + trial.doublecue2.count)%> ms")
+/ fontstyle = ("Arial", 5%, false, false, false, false, 5, 1)
+/position = (50%, 40%)
+</text>
+<page apintro>
+^现在是实验的第三个部分.
+^请您在实验中保持对屏幕中央注视点的注视，当箭头出现时进行按键反应：
+^^* 如果箭头指向左边，请按 '<%values.responsekey_leftlabel%>' 键
+^^* 如果箭头指向右边，请按 '<%values.responsekey_rightlabel%>' 键。
+
+</page>
+<page practiceend>
+您已经完成了练习部分：
+^^^^正确率: <%(trial.nocue2.correctcount + trial.doublecue2.correctcount)/( trial.nocue2.count + trial.doublecue2.count) * 100%>%. 
+^^平均反应速度: <%(trial.nocue2.sumlatency+ trial.doublecue2.sumlatency )/(trial.nocue2.count + trial.doublecue2.count )%> ms 
+^^^^^下面是正式实验部分：  
+^^我们的实验共有3个组块.  每个组块耗时2-3min，每两个组块间，您都可以休息一段时间。
+
+^^^^如果你准备好了，请按Enter开始实验。
+</page>
+<page end>
+我们的实验已经完全结束了，感谢你参加我们的实验！
+</page>
+<page blockinfo>
+这是第 <%block.ant.count + 1%>. 个实验组块.
+^^^^在继续之前休息一下吧. 
+^^^^如果您已经准备好了，请按Enter继续
+</page>
+
+2
+/items = (1, 1, 2, 2, 1, 1, 2, 2)
+
+/replace = false
+
+</list>
+
+<list nocue_targetposition>
+
+/items = (1, 1, 2, 2, 1, 1, 2, 2)
+
+/replace = false
+
+</list>
+
+
+<list nocue_targetposition1_targetdirection>
+
+/items = (1, 2, 1, 2)
+
+/replace = false
+
+</list>
+
+
+
+<list nocue_targetposition2_targetdirection>
+
+/items = (1, 2, 1, 2)
+
+/replace = false
+
+</list>
+
+
+
+
+
+<list doublecue_targetposition>
+
+/items = (1, 1, 2, 2, 1, 1, 2, 2)
+
+/replace = false
+
+</list>
+
+
+
+<list doublecue_targetposition1_targetdirection>
+
+/items = (1, 2, 1, 2)
+
+/replace = false
+
+</list>
+
+
+
+<list doublecue_targetposition2_targetdirection>
+
+/items = (1, 2, 1, 2)
+
+/replace = false
+
+</list>
+
+<list randomfixation>
+/items = (400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 1600)
+/replace = true
+</list>
+
+<trial ITI>
+/stimulusframes = [1 = eraser, fixation]
+/trialduration = values.iti_duration
+/recorddata = false
+/ ontrialend = [values.correct = 0; values.rt = ""]
+</trial>
+<trial nocue>
+
+/ontrialbegin = [values.trialcount += 1; values.cuecondition = 1]
+
+/ontrialbegin = [values.fixation1_duration = list.randomfixation.nextvalue]
+
+
+
+/stimulusframes = [1 = fixation]
+
+/trialduration = values.fixation1_duration
+
+/posttrialpause = 100
+
+
+
+/ontrialend = [values.targetposition = list.nocue_targetposition.nextvalue]
+
+
+
+/ontrialend = [	if 			(values.targetposition == 1) 	values.targetdirection = list.nocue_targetposition1_targetdirection.nextvalue
+
+				else 	 	values.targetdirection = list.nocue_targetposition2_targetdirection.nextvalue]
+
+
+
+/ontrialend = [	values.cue1_x = 50%; values.cue1_y = 50%; 
+
+				values.target_x = 50%; ]
+
+
+
+/ontrialend = [if (values.targetposition == 1) 
+
+					{	values.target_y = values.top_y; }
+
+				else
+
+					{	values.target_y = values.bottom_y; }]
+
+
+
+
+
+/ontrialend = [if (values.targetdirection == 1)  values.selecttarget = 3 else values.selecttarget = 4]
+
+
+
+/branch = [trial.nocue2]
+
+/recorddata = false
+
+</trial>
+<trial practice_feedback>
+/ontrialbegin = [if (values.correct == 1) {text.feedback.textcolor = green; values.selectfeedback = 2} else {text.feedback.textcolor = red; values.selectfeedback = 1}]
+/stimulusframes = [1 = feedback, RTfeedback]
+/trialduration = values.practicefeedback_duration
+/branch = [trial.iti]
+/recorddata = false
+</trial>
+<trial nocue2>
+
+/ontrialbegin = [trial.nocue2.insertstimulustime(text.fixation, values.cue_duration)]
+
+/ontrialbegin = [trial.nocue2.insertstimulustime(text.target, (values.cue_duration+values.fixation2_duration))]
+
+
+
+/ontrialend = [trial.nocue2.resetstimulusframes()]
+
+/ beginresponsetime = values.cue_duration+values.fixation2_duration
+
+/isvalidresponse = [(trial.nocue2.response == values.responsekey_right) || (trial.nocue2.response ==values.responsekey_left)]
+
+/monkeyresponse = (18, 23)
+
+/iscorrectresponse = [(values.targetdirection == 1 && trial.nocue2.response == values.responsekey_right) || (values.targetdirection == 2 && trial.nocue2.response ==values.responsekey_left)]
+
+
+
+/ontrialend = [if (trial.nocue2.correct)
+
+				{	values.count_correctnocue += 1;
+
+					values.sumrt_correctnocue += trial.nocue2.latency; values.correct = 1}]
+
+
+
+
+
+/ ontrialend = [values.rt = trial.nocue2.latency]
+
+
+
+/ontrialend = [values.iti_duration = values.completetrial_duration - values.fixation1_duration - values.cue_duration - values.fixation2_duration - trial.nocue2.latency]
+
+/timeout = (values.cue_duration+values.fixation2_duration+values.target_duration)
+
+/branch = [if (values.practice == 0) trial.ITI else trial.practice_feedback]
+
+/recorddata = true
+
+</trial>
+
+<trial doublecue>
+
+/ontrialbegin = [values.trialcount += 1; values.cuecondition = 1]
+
+/ontrialbegin = [values.fixation1_duration = list.randomfixation.nextvalue]
+/stimulusframes = [1 = fixation]
+/trialduration = values.fixation1_duration
+/posttrialpause = 100
+/ontrialend = [values.targetposition = list.doublecue_targetposition.nextvalue]
+/ontrialend = [	if 			(values.targetposition == 1) 	values.targetdirection = list.doublecue_targetposition1_targetdirection.nextvalue
+				else 	values.targetdirection = list.doublecue_targetposition2_targetdirection.nextvalue]
+/ontrialend = [	values.cue1_x = 50%; values.cue1_y = 50%; 
+				values.target_x = 50%; ]
+/ontrialend = [if (values.targetposition == 1) 
+					{	values.target_y = values.top_y; }
+				else
+					{	values.target_y = values.bottom_y; }]
+/ontrialend = [if (values.targetdirection == 1)  values.selecttarget = 3 else values.selecttarget = 4]
+/branch = [trial.doublecue2]
+/recorddata = false
+</trial>
+
+
+
+<trial doublecue2>
+
+/ontrialbegin = [trial.doublecue2.insertstimulustime(text.fixation, values.cue_duration)]
+
+/ontrialbegin = [trial.doublecue2.insertstimulustime(text.target, (values.cue_duration+values.fixation2_duration))]
+
+
+
+/ontrialend = [trial.doublecue2.resetstimulusframes()]
+
+/ beginresponsetime = values.cue_duration+values.fixation2_duration
+
+/isvalidresponse = [(trial.doublecue2.response == values.responsekey_right) || (trial.doublecue2.response ==values.responsekey_left)]
+
+/monkeyresponse = (18, 23)
+
+/iscorrectresponse = [(values.targetdirection == 1 && trial.doublecue2.response == values.responsekey_right) || (values.targetdirection == 2 && trial.doublecue2.response ==values.responsekey_left)]
+
+
+
+/ontrialend = [if (trial.doublecue2.correct)
+
+				{	values.count_correctdoublecue += 1;
+
+					values.sumrt_correctdoublecue += trial.doublecue2.latency; values.correct = 1}]
+
+
+
+
+
+/ ontrialend = [values.rt = trial.doublecue2.latency]
+
+
+
+/ontrialend = [values.iti_duration = values.completetrial_duration - values.fixation1_duration - values.cue_duration - values.fixation2_duration - trial.doublecue2.latency]
+
+/timeout = (values.cue_duration+values.fixation2_duration+values.target_duration)
+
+/branch = [if (values.practice == 0) trial.ITI else trial.practice_feedback]
+
+/recorddata = true
+
+</trial>
+
+
+<block ANT_practice>
+
+/postinstructions = (practiceend)
+
+/onblockbegin = [values.practice = 1]
+
+/trials = [1-24 = noreplace(nocue, doublecue)]
+
+
+
+/onblockend = [list.nocue_targetposition1_targetdirection.reset(); list.nocue_targetposition2_targetdirection.reset();
+
+				list.nocue_targetposition.reset(); list.nocue_targetposition1_targetdirection.reset();
+
+				list.nocue_targetposition2_targetdirection.reset(); list.nocue_targetposition.reset();
+
+				list.nocue_targetposition1_targetdirection.reset(); list.nocue_targetposition2_targetdirection.reset();
+
+				list.nocue_targetposition.reset()]
+
+/onblockend = [list.doublecue_targetposition1_targetdirection.reset(); list.doublecue_targetposition2_targetdirection.reset();
+
+				list.doublecue_targetposition.reset(); list.doublecue_targetposition1_targetdirection.reset();
+
+				list.doublecue_targetposition2_targetdirection.reset(); list.doublecue_targetposition.reset();
+
+				list.doublecue_targetposition1_targetdirection.reset(); list.doublecue_targetposition2_targetdirection.reset();
+
+				list.doublecue_targetposition.reset()]
+
+
+/onblockend = [values.count_correctnocue = 0; values.count_correctdoublecue = 0 ]
+
+/onblockend = [values.sumrt_correctnocue = 0; values.sumrt_correctdoublecue = 0]
+
+/onblockend = [values.trialcount = 0]
+
+</block>
+
+
+<block ANT>
+/preinstructions = (blockinfo)
+/onblockbegin = [values.blockcount += 1]
+/onblockbegin = [values.practice = 0]
+/trials = [1-32 = noreplace(nocue, doublecue)]
+</block>
+<expt >
+/preinstructions = (apintro)
+/postinstructions = (end)
+/blocks = [1 = ANT_practice; 2-4 = ANT]
+/onexptend = [values.completed = 1]
+</expt>
