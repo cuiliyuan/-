@@ -57,12 +57,13 @@ body{
 		    font-size: 16px;
 		    padding-top: 15px;
 		    padding-right: 50px;
+				text-align: justify;
 		}
-		
+
 		.home-description{
 			padding-right: 90px;
 			padding-left: 90px;
-			
+
 		}
 }
 .img-rabbit{
@@ -88,7 +89,7 @@ body{
 p{
 	color: #585757;
 	font-size: 16px;
-	
+
 }
 
 .page-title{
@@ -115,7 +116,7 @@ footer{
 
 
 .back{
-    width: 170px;    
+    width: 170px;
     font-family: "Crimson";
     font-size: 17px;
     font-style: italic;
@@ -123,7 +124,7 @@ footer{
     text-align: center;
     display: block;
     clear: both;
-    margin-top: 70px;	 
+    margin-top: 70px;
 }
 
 .back i{
@@ -152,7 +153,7 @@ footer{
 	overflow:hidden;
 }
 .btn-group-vertical{
-    font-family: "Josefin Sans";    
+    font-family: "Josefin Sans";
 }
 
 .about{
@@ -160,7 +161,7 @@ footer{
 	/*margin-top: 35px;*/
 	/*margin-bottom: 25px;*/
 	font-size: 32px;
-	
+
 }
 .form-control{
 	font-style: italic;
@@ -170,7 +171,7 @@ footer{
 }
 
 .page-title{
-	
+
 	font-size: 32px;
 	font-family: "Josefin Sans";
 }
@@ -250,7 +251,7 @@ footer{
 }
 
 .item{
-	
+
 	background-color: #313131;
 	color: #f9f9f9;
 }
@@ -290,13 +291,13 @@ footer{
 	font-size: 21px;
 	padding: 15px 20px;
 	margin: 0px;
-	background-color: #fff; 
+	background-color: #fff;
 
 }
 
 .owl-theme .owl-controls .owl-nav [class*=owl-] i{
 	color: #333;
-	
+
 }
 
 .owl-theme .owl-controls .owl-nav [class*=owl-]:hover{
