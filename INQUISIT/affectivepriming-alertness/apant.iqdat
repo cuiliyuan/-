@@ -1,0 +1,7 @@
+date	time	group	subject	build	blocknum	trialnum	blockcode	trialcode	pretrialpause	posttrialpause	windowcenter	trialduration	trialtimeout	blocktimeout	response	correct	latency	inwindow	stimulusnumber1	stimulusitem1	stimulusvpos1	stimulushpos1	stimulusonset1	stimulusnumber2	stimulusitem2	stimulusvpos2	stimulushpos2	stimulusonset2
+011318	19:42:23	1	1	4.0.9.0	1	2	ANT_practice	nocue2	0	0	0	0	0	0	23	1	32	0	0	0	0	0	0	0	0	0	0	0
+011318	19:42:23	1	1	4.0.9.0	1	6	ANT_practice	doublecue2	0	0	0	0	0	0	23	1	17	0	0	0	0	0	0	0	0	0	0	0
+011318	19:42:23	1	1	4.0.9.0	1	10	ANT_practice	nocue2	0	0	0	0	0	0	23	1	36	0	0	0	0	0	0	0	0	0	0	0
+011318	19:48:57	1	1	4.0.9.0	1	2	ANT_practice	nocue2	0	0	0	0	0	0	23	0	35	0	0	0	0	0	0	0	0	0	0	0
+011318	19:48:57	1	1	4.0.9.0	1	6	ANT_practice	nocue2	0	0	0	0	0	0	23	0	56	0	0	0	0	0	0	0	0	0	0	0
+011318	19:48:57	1	1	4.0.9.0	1	10	ANT_practice	nocue2	0	0	0	0	0	0	23	0	33	0	0	0	0	0	0	0	0	0	0	0
